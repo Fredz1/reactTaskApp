@@ -1,0 +1,257 @@
+/* 
+  General Style
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+  font-size: 1em;
+}
+
+body {
+  font-family: 'Segoe UI', 'Roboto', 'Oxygen';
+  -webkit-font-smoothing: antialiased;
+}
+
+:root{
+  --lt: #F2E205;
+  --ltmid: #BFB304;
+  --md: #A69B03;
+  --dkmid: #595302;
+  --dk: #0D0D0D;
+
+}
+
+body{
+  background-color: var(--ltmid);
+}
+
+a{
+  text-decoration: none;
+  color: var(--dk);
+}
+
+a:hover{
+  color: var(--lt);
+}
+
+input{
+  font-size: 1em !important;
+  background-color: transparent;
+  padding: 0.25em;
+}
+
+
+.buttonStyle {
+  --b: 2px;   /* thickness of the border */
+  --c: var(--dkmid);   /* color of the border */
+  --w: 8px;  /* width of border */
+  
+
+  border: var(--b) solid transparent; /* space for the border */
+  --g: #0000 90deg,var(--c) 0;
+  background:
+    conic-gradient(from 90deg  at top    var(--b) left  var(--b),var(--g)) 0    0,
+    conic-gradient(from 180deg at top    var(--b) right var(--b),var(--g)) 100% 0,
+    conic-gradient(from 0deg   at bottom var(--b) left  var(--b),var(--g)) 0    100%,
+    conic-gradient(from -90deg at bottom var(--b) right var(--b),var(--g)) 100% 100%;
+  background-size: var(--w) var(--w);
+  background-origin: border-box;
+  background-repeat: no-repeat;
+  
+  /*Irrelevant code*/  
+  width: fit-content;
+  height: fit-content;
+  padding: 0.5em 1em;
+  margin: 0 auto;
+}
+
+button:hover{
+  color: var(--lt);
+  cursor: pointer;
+  
+}
+
+/* 
+  Home Page
+*/
+
+.homePage{
+  color: var(--dk);
+}
+
+.homeContainer{
+  border: 1px solid black;
+  margin: 0 auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
+  display: grid;
+  grid-auto-flow: row;
+  padding: 1em;
+  font-size: 1.5em;
+}
+
+.homeHeading{
+  font-size: 100px;
+  margin: 0 auto 0.5em auto;
+  writing-mode: vertical-lr;
+  line-height: 1.2;
+}
+
+.rotate {
+  transform: rotate(180deg);
+}
+
+/* 
+  Login Page
+*/
+
+
+.loginContainer{
+  border: 1px solid black;
+  margin: 0 auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
+  display: grid;
+  grid-auto-flow: row;
+  row-gap: 0.5em;
+  padding: 1em;
+  font-size: 1.5em;
+}
+
+.loginPageHeading{
+  font-size: 100px;
+  margin: 0 auto 0.5em auto;
+  writing-mode: vertical-lr;
+  line-height: 1.2;
+}
+
+.loginLinks{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+
+/* 
+  Registration Page
+*/
+
+
+
+.registerContainer{
+  border: 1px solid black;
+  margin: 0 auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
+  display: grid;
+  grid-auto-flow: row;
+  row-gap: 0.5em;
+  padding: 1em;
+  font-size: 1.5em;
+}
+
+/* 
+  Dashboard Style
+*/
+
+.mainTaskContainer{
+  border: 1px solid black;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
+  display: grid;
+  grid-template-columns: 150px 1fr;
+  min-width: 75vw;
+  height: 80vh;
+}
+
+.mainTaskHeading{
+  transform: rotate(180deg);
+  font-size: 100px;
+  margin: auto 0;
+  writing-mode: vertical-lr;
+}
+
+.mainTasksSidePanel{
+  position: absolute;
+  right: 0;
+}
+
+.MainTaskArea{
+  display: grid;
+  grid-template-rows: 100px 1fr 2px;
+  margin-top: 50px;
+}
+
+.MainTaskList{
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
+  margin-top: 1em;
+}
+
+/* 
+  Task Card Style
+*/
+
+.card{
+  display: grid;
+  border: 2px solid #0000;
+  grid-auto-flow: column;
+  justify-content: space-between;
+  font-size: 1.5em;
+  align-items: center;
+  margin: 2px;
+  padding-left: 1em;
+}
+
+.card > button{
+  padding: 5px 1.25em;
+  width: 81px;
+}
+
+.card:hover{
+  border-left: 2px solid black;
+  border-right: 2px solid black;
+}
+
+/* 
+  Input Style
+*/
+
+.inputContainer{
+  margin: 0 auto;
+  display: grid;
+  grid-auto-flow: column;
+  justify-content: space-between;
+  position: relative;
+  top: 50%;
+  height: fit-content;
+  width: 81%;
+  transform: translateY(-50%);
+  padding: 0 1em;
+}
+
+.inputContainer > input{
+  padding: 0.25em;
+  height: 35px;
+  font-size: 2em;
+  margin-right: 2em;
+}
+
+.inputContainer > button{
+  height: 100%;
+  width: 82px;
+}
+
+.inputContainer:hover{
+  border-left: 2px solid black;
+  border-right: 2px solid black;
+}
